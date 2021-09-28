@@ -25,13 +25,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "api",
         "reference": "workspace:packages/api"
+      },
+      {
+        "name": "web",
+        "reference": "workspace:packages/web"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
       ["api", ["workspace:packages/api"]],
-      ["todo", ["workspace:."]]
+      ["todo", ["workspace:."]],
+      ["web", ["workspace:packages/web"]]
     ],
     "fallbackPool": [
     ],
@@ -6241,6 +6246,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["defaults", "npm:1.0.3"]
           ],
           "linkType": "HARD",
+        }]
+      ]],
+      ["web", [
+        ["workspace:packages/web", {
+          "packageLocation": "./packages/web/",
+          "packageDependencies": [
+            ["web", "workspace:packages/web"]
+          ],
+          "linkType": "SOFT",
         }]
       ]],
       ["webidl-conversions", [
