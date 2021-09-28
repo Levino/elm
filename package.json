@@ -1,0 +1,16 @@
+{
+  "name": "todo",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "version": "0.0.1",
+  "description": "A todo app",
+  "main": "index.js",
+  "repository": "git@github.com:Levino/elm.git",
+  "author": "Hardfork GmbH",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ]
+}
