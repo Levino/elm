@@ -1,0 +1,28 @@
+{
+  "test": {
+    "driver": "mysql",
+    "user": "user",
+    "password": "password",
+    "database": "test",
+    "multipleStatements": true,
+    "host": "test-db"
+  },
+  "dev": {
+    "driver": "mysql",
+    "user": "user",
+    "password": "password",
+    "database": "dev",
+    "multipleStatements": true,
+    "host": "dev-db"
+  },
+  "env": {
+    "driver": "mysql",
+    "user": { "ENV": "DB_USER" },
+    "password": { "ENV": "DB_PASSWORD" },
+    "database": { "ENV": "DB_DATABASE" },
+    "multipleStatements": true,
+    "host": { "ENV": "DB_HOST" },
+    "port": { "ENV": "DB_PORT" },
+    "ssl": true
+  }
+}
