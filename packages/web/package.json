@@ -2,6 +2,6 @@
   "name": "web",
   "packageManager": "yarn@3.0.2",
   "scripts": {
-    "build": "elm make src/Main.elm --output=dist/index.html"
+    "build": "npm i -g elm && elm make src/Main.elm --output=dist/index.html"
   }
 }
