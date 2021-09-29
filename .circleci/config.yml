@@ -9,6 +9,7 @@ jobs:
     docker:
       - image: cimg/node:lts
       - image: hardfork/mysql:8
+        name: test-db
         environment:
           MYSQL_PASSWORD: password
           MYSQL_USER: user
@@ -16,7 +17,13 @@ jobs:
           MYSQL_ROOT_PASSWORD: root
     steps:
       - checkout
-      - yarn
+      - run:
+          command: yarn
       - run:
           name: Test API code
           command: yarn workspace api test:ci
+
+workflows:
+  build-and-test:
+    jobs:
+      - api-test
