@@ -1,4 +1,4 @@
-import { Context, setup, teardown } from "./testContext";
+import { Context, setup, teardown } from "../../test/testContext";
 import { createDatabase, Database } from "./index";
 
 describe("Todos collection tests", () => {

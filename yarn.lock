@@ -3732,6 +3732,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/aws-lambda@npm:^8.10.76":
+  version: 8.10.83
+  resolution: "@types/aws-lambda@npm:8.10.83"
+  checksum: 5d13dd0e630db27a941dd53fa6a0d2a45c8e1d43ad945b6a629d73e410d3e4aaf99cd4eea85843b4b877b00f2a9e9eef8002b9fcd18b7f563cc657ca7bac658c
+  languageName: node
+  linkType: hard
+
 "@types/babel__core@npm:^7.0.0, @types/babel__core@npm:^7.1.14, @types/babel__core@npm:^7.1.7":
   version: 7.1.16
   resolution: "@types/babel__core@npm:7.1.16"
@@ -3799,6 +3806,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/cookiejar@npm:*":
+  version: 2.1.2
+  resolution: "@types/cookiejar@npm:2.1.2"
+  checksum: f6e1903454007f86edd6c3520cbb4d553e1d4e17eaf1f77f6f75e3270f48cc828d74397a113a36942f5fe52f9fa71067bcfa738f53ad468fcca0bc52cb1cbd28
+  languageName: node
+  linkType: hard
+
 "@types/cors@npm:2.8.12":
   version: 2.8.12
   resolution: "@types/cors@npm:2.8.12"
@@ -3841,7 +3855,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express@npm:4.17.13":
+"@types/express@npm:4.17.13, @types/express@npm:^4.17.13":
   version: 4.17.13
   resolution: "@types/express@npm:4.17.13"
   dependencies:
@@ -4121,6 +4135,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/superagent@npm:*, @types/superagent@npm:^4.1.13":
+  version: 4.1.13
+  resolution: "@types/superagent@npm:4.1.13"
+  dependencies:
+    "@types/cookiejar": "*"
+    "@types/node": "*"
+  checksum: dffbfd1d3e5b9ed3f44d00e388ce9617407f5a3333241ffcfcf9056b446643794e62a09b817df83611e2f6e8a5bf6a50ba6cfe5abb1afb0f2c4771cdf5b68136
+  languageName: node
+  linkType: hard
+
+"@types/supertest@npm:^2.0.11":
+  version: 2.0.11
+  resolution: "@types/supertest@npm:2.0.11"
+  dependencies:
+    "@types/superagent": "*"
+  checksum: 291abc0d37abe833d517fcfd0c22d51e7d5ffea85ce990603a0d058afa7fe2465b1251d50642ddfd640f66d047029af512793215b612c39adbee72fae5b2ef4f
+  languageName: node
+  linkType: hard
+
 "@types/tapable@npm:^1, @types/tapable@npm:^1.0.5":
   version: 1.0.8
   resolution: "@types/tapable@npm:1.0.8"
@@ -4343,6 +4376,13 @@ __metadata:
     "@typescript-eslint/types": 4.32.0
     eslint-visitor-keys: ^2.0.0
   checksum: 233bf479b6373bae2e61976ed1f2d0fb5c365203984e1233024a2677da0958fb3b19753b67047e8c9a9f4cec7603d1027d73b1302fef0d49c5e92be012d3d92e
+  languageName: node
+  linkType: hard
+
+"@vendia/serverless-express@npm:^4.3.9":
+  version: 4.3.11
+  resolution: "@vendia/serverless-express@npm:4.3.11"
+  checksum: ba32e828ca8431ea1dcf25004375f1a6cd4443d0dde897b02c0f746774057c34d2068b2a245efe36db95eafe19262f327171469df4e4d51af51847caa2611e1e
   languageName: node
   linkType: hard
 
@@ -4846,21 +4886,30 @@ __metadata:
     "@babel/preset-env": ^7.15.6
     "@babel/preset-typescript": ^7.15.0
     "@types/bluebird": ^3.5.36
+    "@types/express": ^4.17.13
     "@types/jest": ^27.0.2
     "@types/node": ^16.10.1
     "@types/ramda": ^0.27.45
     "@types/randomstring": ^1.1.7
+    "@types/superagent": ^4.1.13
+    "@types/supertest": ^2.0.11
     apollo-server: ^3.3.0
+    apollo-server-core: ^3.3.0
+    apollo-server-express: ^3.3.0
+    apollo-server-lambda: ^3.3.0
     babel-jest: ^27.2.3
     bluebird: ^3.7.2
     db-migrate: ^1.0.0-beta.16
     db-migrate-mysql: ^2.2.0
+    express: ^4.17.1
     graphql: ^15.6.0
+    graphql-tag: ^2.12.5
     jest: ^27.2.3
     mysql2: ^2.3.0
     ramda: ^0.27.1
     randomstring: ^1.2.1
     serverless-mysql: ^1.5.4
+    supertest: ^6.1.6
     typescript: ^4.4.3
   languageName: unknown
   linkType: soft
@@ -4974,6 +5023,21 @@ __metadata:
     express: ^4.17.1
     graphql: ^15.3.0
   checksum: e4ef08e039bd924f188d4fa12d6b1374edefaaa854281635244e411d978bac992dd76585185b07f012bd29f425a624e66c161c683665909a113a6dfafde44fa5
+  languageName: node
+  linkType: hard
+
+"apollo-server-lambda@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "apollo-server-lambda@npm:3.3.0"
+  dependencies:
+    "@types/aws-lambda": ^8.10.76
+    "@vendia/serverless-express": ^4.3.9
+    apollo-server-core: ^3.3.0
+    apollo-server-express: ^3.3.0
+    express: ^4.17.1
+  peerDependencies:
+    graphql: ^15.3.0
+  checksum: 607dbbafde1a0ac832567326273a05a2e2e9bfdcf5af4526754513c18f1925b51718f4828baca0f6a19f923f0b9860623e65da74645fa44588e8b791ebd78a10
   languageName: node
   linkType: hard
 
@@ -6654,7 +6718,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"component-emitter@npm:^1.2.1":
+"component-emitter@npm:^1.2.1, component-emitter@npm:^1.3.0":
   version: 1.3.0
   resolution: "component-emitter@npm:1.3.0"
   checksum: b3c46de38ffd35c57d1c02488355be9f218e582aec72d72d1b8bbec95a3ac1b38c96cd6e03ff015577e68f550fbb361a3bfdbd9bb248be9390b7b3745691be6b
@@ -6924,6 +6988,13 @@ __metadata:
   version: 0.4.0
   resolution: "cookie@npm:0.4.0"
   checksum: 760384ba0aef329c52523747e36a452b5e51bc49b34160363a6934e7b7df3f93fcc88b35e33450361535d40a92a96412da870e1816aba9aa6cc556a9fedd8492
+  languageName: node
+  linkType: hard
+
+"cookiejar@npm:^2.1.2":
+  version: 2.1.3
+  resolution: "cookiejar@npm:2.1.3"
+  checksum: 88259983ebc52ceb23cdacfa48762b6a518a57872eff1c7ed01d214fff5cf492e2660d7d5c04700a28f1787a76811df39e8639f8e17670b3cf94ecd86e161f07
   languageName: node
   linkType: hard
 
@@ -9071,6 +9142,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-safe-stringify@npm:^2.0.7":
+  version: 2.1.1
+  resolution: "fast-safe-stringify@npm:2.1.1"
+  checksum: a851cbddc451745662f8f00ddb622d6766f9bd97642dabfd9a405fb0d646d69fc0b9a1243cbf67f5f18a39f40f6fa821737651ff1bceeba06c9992ca2dc5bd3d
+  languageName: node
+  linkType: hard
+
 "fastq@npm:^1.6.0":
   version: 1.13.0
   resolution: "fastq@npm:1.13.0"
@@ -9344,6 +9422,13 @@ __metadata:
     combined-stream: ^1.0.6
     mime-types: ^2.1.12
   checksum: 10c1780fa13dbe1ff3100114c2ce1f9307f8be10b14bf16e103815356ff567b6be39d70fc4a40f8990b9660012dc24b0f5e1dde1b6426166eb23a445ba068ca3
+  languageName: node
+  linkType: hard
+
+"formidable@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "formidable@npm:1.2.2"
+  checksum: 43b3ec9a8f8055112e1a9a40eb748cdcd86cb9076dc9a17b0caa2bc26908eeae865dbee62d7c4bc26681fb75c2f42d60323af9c9d06c843e94f51f9b46954a0a
   languageName: node
   linkType: hard
 
@@ -9821,7 +9906,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"graphql-tag@npm:^2.11.0":
+"graphql-tag@npm:^2.11.0, graphql-tag@npm:^2.12.5":
   version: 2.12.5
   resolution: "graphql-tag@npm:2.12.5"
   dependencies:
@@ -13075,7 +13160,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"methods@npm:~1.1.2":
+"methods@npm:^1.1.2, methods@npm:~1.1.2":
   version: 1.1.2
   resolution: "methods@npm:1.1.2"
   checksum: 0917ff4041fa8e2f2fda5425a955fe16ca411591fbd123c0d722fcf02b73971ed6f764d85f0a6f547ce49ee0221ce2c19a5fa692157931cecb422984f1dcd13a
@@ -13164,7 +13249,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"mime@npm:^2.4.4":
+"mime@npm:^2.4.4, mime@npm:^2.4.6":
   version: 2.5.2
   resolution: "mime@npm:2.5.2"
   bin:
@@ -18261,6 +18346,35 @@ resolve@^2.0.0-next.3:
     postcss: ^7.0.0
     postcss-selector-parser: ^3.0.0
   checksum: 8acf28ea609bee6d7ba40121bcf53af8d899c1ec04f2c08de9349b8292b84b8aa7f82e14c623ae6956decf5b7a7eeea5472ab8e48de7bdcdb6d76640444f6753
+  languageName: node
+  linkType: hard
+
+"superagent@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "superagent@npm:6.1.0"
+  dependencies:
+    component-emitter: ^1.3.0
+    cookiejar: ^2.1.2
+    debug: ^4.1.1
+    fast-safe-stringify: ^2.0.7
+    form-data: ^3.0.0
+    formidable: ^1.2.2
+    methods: ^1.1.2
+    mime: ^2.4.6
+    qs: ^6.9.4
+    readable-stream: ^3.6.0
+    semver: ^7.3.2
+  checksum: 32ca1bc9805679cddeffdf5cf369da47359a0d38ee45ea668bba4116e17c247739e4084db9cc88217dd594a816e766a3dbf2431de017fbac0bc80efd6af30c1d
+  languageName: node
+  linkType: hard
+
+"supertest@npm:^6.1.6":
+  version: 6.1.6
+  resolution: "supertest@npm:6.1.6"
+  dependencies:
+    methods: ^1.1.2
+    superagent: ^6.1.0
+  checksum: 51d11b794a022b49f0f9664e6d8ffef5e8d18467f65d2b4326e52ec96f0801d7066bf9a97eb06e8b6cd3eb6f662ee5bed937cd5764ab0617a822d7ee4c72ff36
   languageName: node
   linkType: hard
 

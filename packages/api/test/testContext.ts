@@ -1,7 +1,7 @@
 import mysql, { Connection, createConnection } from "mysql2/promise";
 import randomstring from "randomstring";
 
-import { createMigration, Migration } from "./migration";
+import { createMigration, Migration } from "../src/database/migration";
 
 export interface Context {
   mysql: Connection;
