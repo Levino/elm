@@ -1,0 +1,22 @@
+# This config is equivalent to both the '.circleci/extended/orb-free.yml' and the base '.circleci/config.yml'
+version: 2.1
+
+orbs:
+  node: circleci/node@4.7
+
+jobs:
+  api-test:
+    docker:
+      - image: cimg/node:lts
+      - image: hardfork/mysql:8
+        environment:
+          MYSQL_PASSWORD: password
+          MYSQL_USER: user
+          MYSQL_DATABASE: test
+          MYSQL_ROOT_PASSWORD: root
+    steps:
+      - checkout
+      - yarn
+      - run:
+          name: Test API code
+          command: yarn workspace api test:ci
