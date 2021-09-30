@@ -5809,6 +5809,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@netlify/functions", [
+        ["npm:0.7.2", {
+          "packageLocation": "./.yarn/cache/@netlify-functions-npm-0.7.2-20f801ae99-962d2142a5.zip/node_modules/@netlify/functions/",
+          "packageDependencies": [
+            ["@netlify/functions", "npm:0.7.2"],
+            ["is-promise", "npm:4.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@nodelib/fs.scandir", [
         ["npm:2.1.5", {
           "packageLocation": "./.yarn/cache/@nodelib-fs.scandir-npm-2.1.5-89c67370dd-a970d595bd.zip/node_modules/@nodelib/fs.scandir/",
@@ -8078,6 +8088,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/core", "npm:7.15.5"],
             ["@babel/preset-env", "virtual:ee30e4e8621888118e3112c9a4791d8c9d181961a7fc656afb8f9862703185d5aaf75e7d8371b318217947e6ff3ef744eedc1fa54c88d453e07d11fef918be75#npm:7.15.6"],
             ["@babel/preset-typescript", "virtual:ee30e4e8621888118e3112c9a4791d8c9d181961a7fc656afb8f9862703185d5aaf75e7d8371b318217947e6ff3ef744eedc1fa54c88d453e07d11fef918be75#npm:7.15.0"],
+            ["@netlify/functions", "npm:0.7.2"],
+            ["@types/aws-lambda", "npm:8.10.83"],
             ["@types/bluebird", "npm:3.5.36"],
             ["@types/express", "npm:4.17.13"],
             ["@types/jest", "npm:27.0.2"],
@@ -8086,6 +8098,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/randomstring", "npm:1.1.7"],
             ["@types/superagent", "npm:4.1.13"],
             ["@types/supertest", "npm:2.0.11"],
+            ["@vendia/serverless-express", "npm:4.3.11"],
             ["apollo-server", "virtual:ee30e4e8621888118e3112c9a4791d8c9d181961a7fc656afb8f9862703185d5aaf75e7d8371b318217947e6ff3ef744eedc1fa54c88d453e07d11fef918be75#npm:3.3.0"],
             ["apollo-server-core", "virtual:ee30e4e8621888118e3112c9a4791d8c9d181961a7fc656afb8f9862703185d5aaf75e7d8371b318217947e6ff3ef744eedc1fa54c88d453e07d11fef918be75#npm:3.3.0"],
             ["apollo-server-express", "virtual:ee30e4e8621888118e3112c9a4791d8c9d181961a7fc656afb8f9862703185d5aaf75e7d8371b318217947e6ff3ef744eedc1fa54c88d453e07d11fef918be75#npm:3.3.0"],
@@ -15534,6 +15547,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/is-potential-custom-element-name-npm-1.0.1-f352f606f8-ced7bbbb64.zip/node_modules/is-potential-custom-element-name/",
           "packageDependencies": [
             ["is-potential-custom-element-name", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["is-promise", [
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/is-promise-npm-4.0.0-1e3c05420c-0b46517ad4.zip/node_modules/is-promise/",
+          "packageDependencies": [
+            ["is-promise", "npm:4.0.0"]
           ],
           "linkType": "HARD",
         }]

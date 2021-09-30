@@ -3087,6 +3087,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@netlify/functions@npm:^0.7.2":
+  version: 0.7.2
+  resolution: "@netlify/functions@npm:0.7.2"
+  dependencies:
+    is-promise: ^4.0.0
+  checksum: 962d2142a573995fd05593a7c80a8f71d4410de80cb3a52a9fa51184b8c7a309b3925c55d8f8e4e7c1730dc9776aa82c78264040458375fc34d0deb60a651a5a
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -3739,7 +3748,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/aws-lambda@npm:^8.10.76":
+"@types/aws-lambda@npm:^8.10.76, @types/aws-lambda@npm:^8.10.83":
   version: 8.10.83
   resolution: "@types/aws-lambda@npm:8.10.83"
   checksum: 5d13dd0e630db27a941dd53fa6a0d2a45c8e1d43ad945b6a629d73e410d3e4aaf99cd4eea85843b4b877b00f2a9e9eef8002b9fcd18b7f563cc657ca7bac658c
@@ -4405,7 +4414,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vendia/serverless-express@npm:^4.3.9":
+"@vendia/serverless-express@npm:^4.3.11, @vendia/serverless-express@npm:^4.3.9":
   version: 4.3.11
   resolution: "@vendia/serverless-express@npm:4.3.11"
   checksum: ba32e828ca8431ea1dcf25004375f1a6cd4443d0dde897b02c0f746774057c34d2068b2a245efe36db95eafe19262f327171469df4e4d51af51847caa2611e1e
@@ -4911,6 +4920,8 @@ __metadata:
     "@babel/core": ^7.15.5
     "@babel/preset-env": ^7.15.6
     "@babel/preset-typescript": ^7.15.0
+    "@netlify/functions": ^0.7.2
+    "@types/aws-lambda": ^8.10.83
     "@types/bluebird": ^3.5.36
     "@types/express": ^4.17.13
     "@types/jest": ^27.0.2
@@ -4919,6 +4930,7 @@ __metadata:
     "@types/randomstring": ^1.1.7
     "@types/superagent": ^4.1.13
     "@types/supertest": ^2.0.11
+    "@vendia/serverless-express": ^4.3.11
     apollo-server: ^3.3.0
     apollo-server-core: ^3.3.0
     apollo-server-express: ^3.3.0
@@ -11198,6 +11210,13 @@ fsevents@^1.2.7:
   version: 1.0.1
   resolution: "is-potential-custom-element-name@npm:1.0.1"
   checksum: ced7bbbb6433a5b684af581872afe0e1767e2d1146b2207ca0068a648fb5cab9d898495d1ac0583524faaf24ca98176a7d9876363097c2d14fee6dd324f3a1ab
+  languageName: node
+  linkType: hard
+
+"is-promise@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "is-promise@npm:4.0.0"
+  checksum: 0b46517ad47b00b6358fd6553c83ec1f6ba9acd7ffb3d30a0bf519c5c69e7147c132430452351b8a9fc198f8dd6c4f76f8e6f5a7f100f8c77d57d9e0f4261a8a
   languageName: node
   linkType: hard
 
