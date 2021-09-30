@@ -18,10 +18,17 @@ describe("Todos collection tests", () => {
       userId: "UserId",
     });
     expect(id).toEqual(1);
-    return expect(database.todos.getById("UserId")(id)).resolves.toMatchObject({
+    await expect(database.todos.getById("UserId")(id)).resolves.toMatchObject({
       title: "Title",
       description: "Description",
       id: 1,
     });
+    await expect(database.todos.getAll("UserId")).resolves.toMatchObject([
+      {
+        title: "Title",
+        description: "Description",
+        id: 1,
+      },
+    ]);
   });
 });

@@ -5,8 +5,8 @@ import { gql } from "apollo-server";
 // your data.
 export const typeDefs = gql`
   type Todo {
-    id: String
-    title: String
+    id: String!
+    title: String!
     description: String
   }
 
@@ -18,6 +18,6 @@ export const typeDefs = gql`
   }
 
   type Mutation {
-    addTodo(title: String, description: String): Todo
+    addTodo(title: String!, description: String): String
   }
 `;
