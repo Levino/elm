@@ -10,3 +10,4 @@ node_modules
 !.yarn/sdks
 !.yarn/versions
 /packages/api/.env
+/packages/api/.netlify/
