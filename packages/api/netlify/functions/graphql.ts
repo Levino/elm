@@ -2,6 +2,7 @@ import serverlessExpress from '@vendia/serverless-express'
 import { createApp } from '../../src'
 import { createConnection } from 'mysql2/promise'
 import { Handler } from 'aws-lambda'
+import { Event } from '@netlify/functions/src/function/event'
 
 let serverlessExpressInstance: Handler
 
@@ -12,12 +13,20 @@ const setup: Handler = async (event, context, callback) => {
     return serverlessExpressInstance(event, context, callback)
 }
 
-const handler: Handler = (event, context, callback) => {
-    console.log(event.path)
-    if (serverlessExpressInstance)
-        return serverlessExpressInstance(event, context, callback)
+const stripNetlifyPath = (event: Event) => ({
+    ...event,
+    path: event.path.replace('/.netlify/functions/', '/'),
+})
 
-    return setup(event, context, callback)
+const handler: Handler = (event, context, callback) => {
+    if (serverlessExpressInstance)
+        return serverlessExpressInstance(
+            stripNetlifyPath(event),
+            context,
+            callback
+        )
+
+    return setup(stripNetlifyPath(event), context, callback)
 }
 
 exports.handler = handler
