@@ -9,6 +9,7 @@ let serverlessExpressInstance: Handler
 
 const setup: Handler = async (event, context, callback) => {
     const mysql = await createConnection(process.env.MYSQL_CONNECTION_URI!)
+    console.log(process.env.MYSQL_CONNECTION_URI)
     const app = await createApp({ mysql })
     serverlessExpressInstance = serverlessExpress({ app })
     return serverlessExpressInstance(event, context, callback)
