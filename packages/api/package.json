@@ -44,7 +44,8 @@
     "jwks-rsa": "^2.0.4",
     "mysql2": "^2.3.0",
     "ramda": "^0.27.1",
-    "serverless-mysql": "^1.5.4"
+    "serverless-mysql": "^1.5.4",
+    "source-map-support": "^0.5.20"
   },
   "scripts": {
     "docker": "CURRENT_UID=$(id -u):$(id -g) docker-compose run --rm --workdir='/home/node/packages/api' runner",

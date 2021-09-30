@@ -1,3 +1,4 @@
+import 'source-map-support/register'
 import serverlessExpress from '@vendia/serverless-express'
 import { createApp } from '../../src'
 import { createConnection } from 'mysql2/promise'
