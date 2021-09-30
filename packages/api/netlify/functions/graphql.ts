@@ -13,6 +13,7 @@ const setup: Handler = async (event, context, callback) => {
 }
 
 const handler: Handler = (event, context, callback) => {
+    console.log(event.path)
     if (serverlessExpressInstance)
         return serverlessExpressInstance(event, context, callback)
 
